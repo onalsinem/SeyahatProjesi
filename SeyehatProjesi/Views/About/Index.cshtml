@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Style.cshtml";
+}
+@model List<SeyehatProjesi.Models.Siniflar.Hakkimizda>
+
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>About</h3>
+            @foreach (var x in Model)
+            {
+                <img src="@x.FotoUrl" alt="" />
+                <p>@x.Aciklama</p>
+            }
+        </div>
+    </div>
+</div>
+
