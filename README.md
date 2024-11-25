@@ -1,4 +1,3 @@
-Tatil Seyahat Sitesi (ASP.NET MVC 5)
 Bu proje, ASP.NET MVC  kullanılarak geliştirilmiş bir Tatil Seyahat Sitesi uygulamasıdır. Proje, kullanıcıların tatil seyahatleri hakkında bilgi almasını,
 yorum yapmasını ve tatil seçeneklerini incelemesini sağlayan bir platform sunar. Proje, temel bir seyahat rehberi sitesi oluşturmayı hedefleyen bir öğretici niteliği taşımaktadır.
 
