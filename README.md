@@ -6,6 +6,7 @@ yorum yapmasını ve tatil seçeneklerini incelemesini sağlayan bir platform su
 *Kullanıcı İşlemleri:* Kullanıcılar, seyahatler hakkında yorum yapabilir ve bilgileri görüntüleyebilir.
 *SEO Dostu Tasarım:* Uygulama, temiz URL'ler ve kullanıcı dostu bir tasarım ile geliştirilmiştir.
 *Veritabanı Entegrasyonu:* Proje, MS SQL Server kullanarak veri yönetimi sağlar.
+
 *Kullanılan Teknolojiler ve Araçlar*
 ASP.NET MVC 5
 Entity Framework
