@@ -11,14 +11,10 @@ Uygulama, temiz URL'ler ve kullanıcı dostu bir tasarım ile geliştirilmiştir
 *Veritabanı Entegrasyonu:* Proje, MS SQL Server kullanarak veri yönetimi sağlar.
 
 *Kullanılan Teknolojiler ve Araçlar*
+
 ASP.NET MVC 5
-
 Entity Framework
-
 Microsoft SQL Server
-
 Bootstrap: Modern ve responsive bir tasarım için.
-
 jQuery: Dinamik kullanıcı etkileşimleri için.
-
 HTML5 ve CSS3
