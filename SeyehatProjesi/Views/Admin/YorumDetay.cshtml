@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "YorumDetay";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+@model SeyehatProjesi.Models.Siniflar.Yorumlar
+
+@using (Html.BeginForm("YorumGuncelle", "Admin", FormMethod.Post))
+{
+    @Html.LabelFor(x => x.ID)
+    @Html.TextBoxFor(x => x.ID, new { @class = "form-control", @readonly = "readonly" })
+    <br />
+    @Html.LabelFor(x => x.KullaniciAdi)
+    @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Mail)
+    @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Blog.Baslik)
+    @Html.TextBoxFor(x => x.Blog.Baslik, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Yorum)
+    @Html.TextAreaFor(x => x.Yorum, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-success">Güncelle</button>
+}
