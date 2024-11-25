@@ -1,0 +1,37 @@
+﻿@model SeyehatProjesi.Models.Siniflar.BlogYorum
+
+<div class="padding1">
+    <h4>En Beğendiğim Yerler</h4>
+
+    <!-- İlk 3 eleman -->
+    <div class="box-left">
+        @foreach (var x in Model.Deger1.Take(3))
+        {
+            <div class="bot-img">
+                <img src="@x.BlogImage" alt="" style="height:80px; width:100px" />
+            </div>
+            <div class="bot-desc">
+                <p>
+                    @x.Aciklama.Substring(0,80) ...
+                </p>
+            </div>
+            <div class="clear"></div>
+        }
+    </div>
+
+   
+    <div class="box1-left">
+        @foreach (var x in Model.Deger1.Skip(3).Take(3))
+        {
+            <div class="bot-img">
+                <img src="@x.BlogImage" alt="" style="height:80px; width:100px" />
+            </div>
+            <div class="bot-desc">
+                <p>
+                    @x.Aciklama.Substring(0,80) ...
+                </p>
+            </div>
+            <div class="clear"></div>
+        }
+    </div>
+</div>

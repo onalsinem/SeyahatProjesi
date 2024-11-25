@@ -45,7 +45,7 @@
                 }
 
                     <!-- Yorum Formu -->
-                    <div class="content-form">
+                    @*<div class="content-form">
                         <h3>Bir Yorum Yapın</h3>
                         <form>
                             <input type="text" placeholder="Kullanıcı Adı" required />
@@ -53,25 +53,31 @@
                             <textarea placeholder="Yorum"></textarea>
                             <input type="submit" value="Gönder" />
                         </form>
-                    </div>
+                    </div>*@
+                @Html.Action("YorumYap", "Blog")
                 </div>
 
             <!-- Yan İçerik -->
             <div class="col-md-4 side-content">
                 <div class="recent">
                     <h3>SON BLOGLAR</h3>
-                    <ul>
-                        <li><a href="#">Aliquam tincidunt mauris</a></li>
-           
-                    </ul>
+                    @foreach (var y in Model.Deger3.Take(5))
+                    {
+                        <ul>
+                            <li><a href="/Blog/BlogDetay/@y.ID">@y.Baslik</a></li>
+                        </ul>
+                    }
                 </div>
                 <div class="comments">
                     <h3>SON YORUMLAR</h3>
-                    <ul>
-                        <li><a href="#">Amada Doe</a> on <a href="#">Hello World!</a></li>
-               
-                    </ul>
+                    @foreach (var y in Model.Deger2)
+                    {
+                        <ul>
+                            <li><a href="#">@y.KullaniciAdi </a> on <a href="#">@y.Yorum</a></li>
+                        </ul>
+                    }
                 </div>
+            </div>
             </div>
         </div>
     </div>

@@ -11,6 +11,53 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<style>
+    .single-main img {
+        border-radius: 10px;
+        object-fit: cover;
+    }
+
+    .single-grid a {
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .single-grid p {
+        margin-top: 10px;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .side-content h3 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        color: #343a40;
+        border-bottom: 2px solid #f0f0f0;
+        padding-bottom: 10px;
+        margin-bottom: 20px;
+    }
+
+    .side-content ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        .side-content ul li {
+            margin-bottom: 10px;
+        }
+
+            .side-content ul li a {
+                text-decoration: none;
+                font-size: 1rem;
+                color: #6c757d;
+            }
+
+                .side-content ul li a:hover {
+                    color: #f0f0f0;
+                }
+</style>
+
 <!DOCTYPE HTML>
 <html>
 <head>
@@ -19,10 +66,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <link href="~/web2/css/style.css" rel='stylesheet' type='text/css' />
     <link href='http://fonts.googleapis.com/css?family=Oswald:100,400,300,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,300italic' rel='stylesheet' type='text/css'>
-    <!----//webfonts---->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <!--end slider -->
-    <!--script-->
     <script type="text/javascript" src="~/web2/js/move-top.js"></script>
     <script type="text/javascript" src="~/web2/js/easing.js"></script>
 
@@ -37,7 +81,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 @foreach (var x in Model.Deger1)
                 {
                     <div class="single-grid">
-                        <img src="@x.BlogImage" />
+                        <img src="@x.BlogImage" style="width:750px;height:400px" />
                         <a href="/Blog/BlogDetay/@x.ID">@x.Baslik</a>
                         <p>
                             @x.Aciklama
@@ -47,25 +91,57 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
 
 
+            @*<div class="col-md-4 side-content">
+            <div class="recent">
+                <h3>SON BLOGLAR</h3>
+                @foreach (var y in Model.Deger3.Take(5))
+                {
+                    <ul>
+                        <li><a href="/Blog/BlogDetay/@y.ID">@y.Baslik</a></li>
+                    </ul>
+                }
+                </div>
+            <div class="comments">
+                <h3>SON YORUMLAR</h3>
+                @foreach (var y in Model.Deger2)
+                {
+                    <ul>
+                        <li><a href="#">@y.KullaniciAdi </a> on <a href="#">@y.Yorum</a></li>
+                    </ul>
+                }
+                </div>
+        </div>*@
+
             <div class="col-md-4 side-content">
-                <div class="recent">
-                    <h3>SON BLOGLAR</h3>
-                    @foreach (var y in Model.Deger3)
+                <!-- Son Bloglar -->
+                <div class="recent mb-4">
+                    <h3>Son Bloglar</h3>
+                    @foreach (var y in Model.Deger3.Take(5))
                     {
                         <ul>
-                            <li><a href="/Blog/BlogDetay/@y.ID">@y.Baslik</a></li>
+                            <li>
+                                <a href="/Blog/BlogDetay/@y.ID">
+                                    <i class="bi bi-arrow-right-circle-fill me-2"></i>@y.Baslik
+                                </a>
+                            </li>
                         </ul>
                     }
-                    </div>
+                </div>
+
+                <!-- Son Yorumlar -->
                 <div class="comments">
-                    <h3>SON YORUMLAR</h3>
+                    <h3>Son Yorumlar</h3>
                     @foreach (var y in Model.Deger2)
                     {
                         <ul>
-                            <li><a href="#">@y.KullaniciAdi </a> on <a href="#">@y.Yorum</a></li>
+                            <li>
+                                <i class="bi bi-chat-right-dots me-2"></i>
+                                <strong>@y.KullaniciAdi</strong> on
+                                <span class="text-muted">"@y.Yorum"</span>
+                            </li>
                         </ul>
                     }
-                    </div>
+                </div>
             </div>
         </div>
 

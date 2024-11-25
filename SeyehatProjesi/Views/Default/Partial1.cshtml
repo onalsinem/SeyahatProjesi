@@ -1,0 +1,24 @@
+﻿@model SeyehatProjesi.Models.Siniflar.BlogYorum
+
+<div class="padding">
+    <h4>Top 10 Blog Yazısı</h4>
+    <ul class="list list-pad">
+        @if (Model.Deger1 != null && Model.Deger1.Any())
+         {
+            int y = 1;
+            foreach (var x in Model.Deger1)
+            {
+                <li class="@(y % 2 == 0 ? "list-bg1" : "list-bg")">
+                    <span>@y</span>
+                    <a href="/Blog/BlogDetay/@x.ID">@x.Baslik</a>
+                </li>
+                y++;
+            }
+        }
+        else
+        {
+            <li>Henüz bir blog yazısı yok</li>
+        }
+    </ul>
+    <a href="#" class="link1">See all hotels</a>
+</div>

@@ -16,7 +16,8 @@ namespace SeyehatProjesi.Controllers
         {
             //var deger = c.Blogs.ToList();
             by.Deger1 = c.Blogs.ToList();
-            by.Deger3 = c.Blogs.Take(5);
+            //by.Deger3 = c.Blogs.Take(5);
+            by.Deger3 = c.Blogs.ToList();
             by.Deger2 = c.Yorumlars.Take(5);
             return View(by);
         }
@@ -26,7 +27,28 @@ namespace SeyehatProjesi.Controllers
             //var BlogBul = c.Blogs.Where(x => x.ID == id).ToList();
             by.Deger1= c.Blogs.Where(x => x.ID == id).ToList();
             by.Deger2 = c.Yorumlars.Where(x => x.BlogId == id).ToList();
+            by.Deger3 = c.Blogs.ToList();
+
+            
             return View(by);
         }
+
+        [HttpGet]
+        public PartialViewResult YorumYap(int id)
+        {
+            ViewBag.BlogID = id;
+            return PartialView();
+        }
+
+        [HttpPost]
+        public PartialViewResult YorumYap(Yorumlar y)
+        {
+            c.Yorumlars.Add(y);
+            c.SaveChanges();
+            return PartialView();
+        }
+
+        
+        
     }
 }
