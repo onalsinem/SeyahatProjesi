@@ -18,5 +18,8 @@ Microsoft SQL Server
 Bootstrap: Modern ve responsive bir tasarım için.
 jQuery: Dinamik kullanıcı etkileşimleri için.
 HTML5 ve CSS3
-![image](https://github.com/user-attachments/assets/f896724f-![projeuc](https://github.com/user-attachments/assets/78d0cdab-28c0-4873-afee-996e59f88289)
-7406-44a9-adee-264bc42950cb)
+
+![projebir](https://github.com/user-attachments/assets/6db40fb5-9a64-4a24-b3b3-d5248995662b)
+
+
+![projeuc](https://github.com/user-attachments/assets/813b0852-d007-46eb-bc00-26ea7407ce26)
